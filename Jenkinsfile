@@ -3,9 +3,21 @@ pipeline {
 
   stages {
 
-    stage('init') {
+    stage('dev') {
+      when {
+        branch 'dev'
+      }
       steps {
-        echo 'what branch is this? ${GIT_BRANCH}'
+        echo 'run dev cicd'
+      }
+    }
+
+    stage('test') {
+      when {
+        branch 'test'
+      }
+      steps {
+        echo 'run test cicd'
       }
     }
   }
