@@ -5,7 +5,7 @@ pipeline {
 
     stage('init') {
       steps {
-        echo 'what branch is this? $GIT_BRANCH'
+        echo 'what branch is this? ${GIT_BRANCH}'
       }
     }
   }
